@@ -15,7 +15,7 @@ export default {};
           />
           <span
             class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >Flowbite</span
+            >Flowbite</span 
           >
         </router-link>
         <div class="flex items-center lg:order-2">
