@@ -22,14 +22,12 @@ export default {
   },
   methods: {
     submitForm() {
-      // Handle form submission here
       console.log('Form submitted:', this.formData);
-      // You can make an HTTP request to your server to handle registration
     }
   }
 };
 </script>
 
 <style scoped>
-/* Add custom styles here if needed */
+
 </style>

@@ -1,49 +1,39 @@
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomeView from "../views/Home.vue";
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/Home.vue'
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  } ,
+    path: "/",
+    name: "home",
+    component: HomeView,
+  },
   {
-    path: '/register',
-    name: 'signup',
-    component: () => import("../views/RegistrationForm.vue")
-  } ,
+    path: "/register",
+    name: "register",
+    component: () => import("../views/RegistrationForm.vue"),
+  },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import("../views/LoginForm.vue")
-  } ,
-  {
-    path: '/tasks',
-    name: 'tasks',
-    component: () => import("../views/TasksView.vue")
-  } 
-]
+    path: "/login",
+    name: "login",
+    component: () => import("../views/LoginForm.vue"),
+  },
+  // {
+  //   path: '/tasks',
+  //   name: 'tasks',
+  //   component: () => import("../views/TasksView.vue")
+  // }
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
-
-
-
-
-
-
-
-
-
+export default router;
 
 // import { createRouter, createWebHistory } from "vue-router";
 
@@ -69,5 +59,3 @@ export default router
 // });
 
 // export default router;
-
-
