@@ -1,10 +1,8 @@
-# Vue 3 + Vite
-
-Taskify - Frontend
+# Taskify - Frontend
 
 Taskify is a modern task management platform that allows users to efficiently manage their tasks through a user-friendly interface. This repository contains the frontend codebase for Taskify, developed using Vue.js with Axios for making HTTP requests to the Taskify backend API.
 
-Features
+# Features
 Task Listing: View the list of current tasks upon logging in.
 Task Creation: Create a new task by providing a title, description, and deadline.
 Task Modification: Edit details of existing tasks as needed.
@@ -15,7 +13,8 @@ Framework: Vue.js - A progressive JavaScript framework for building user interfa
 HTTP Requests: Axios - Promise-based HTTP client for the browser and Node.js.
 Styling: HTML5 and CSS3 for structure and styling.
 Responsive Design: Ensures full responsiveness across various devices and screen sizes.
-User Stories
+
+# User Stories
 As a user, I want to view my current task list upon logging in to the application.
 As a user, I want to create a new task by providing a title, description, and deadline.
 As a user, I want to modify the details of an existing task if necessary.
@@ -28,7 +27,8 @@ Implements reactive and interactive components to provide a smooth user experien
 Implements efficient state management for handling task data and user interactions.
 Elaborates unit tests to ensure the proper functioning of frontend components.
 Usage
-To run the Taskify frontend locally:
+
+# To run the Taskify frontend locally:
 
 Clone this repository.
 Install dependencies using npm install or yarn install.
@@ -37,7 +37,7 @@ Access the application in your browser at http://localhost:8080.
 Contributing
 Contributions are welcome! If you'd like to contribute to Taskify, please follow these steps:
 
-Fork this repository.
+# Fork this repository.
 Create a new branch for your feature (git checkout -b feature/your-feature-name).
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature/your-feature-name).
