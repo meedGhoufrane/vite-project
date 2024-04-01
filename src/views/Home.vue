@@ -1,4 +1,29 @@
-<template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
   <div>
     <p v-for="(task, index) in tasks" :key="index" >{{ task.title }}</p>
     <button @click="increment" :class="counter > 0 ? 'plus' : 'minus'">
@@ -39,4 +64,4 @@ export default {
     },
   },
 };
-</script>
+</script> -->
