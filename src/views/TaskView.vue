@@ -10,7 +10,6 @@
                     <b>are you sure you wanna delete this task</b>
                 </h4>
             </template>
-
             <template #footer>
                 <div class="con-footer">
                     <vs-button @click="deleteTask()" transparent>
