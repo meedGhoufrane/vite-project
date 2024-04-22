@@ -236,20 +236,18 @@ export default {
             if (value) {
                 console.log("is changed" + value)
             }
-
-
+            
         },
         openModalEdit(idTaskEdit) {
             this.Edittask = JSON.stringify(this.tasks[this.findTask(idTaskEdit)])
-            console.log(this.Edittask)
+            // console.log(this.Edittask)
             this.idTaskEdit = idTaskEdit
             this.propactive = true
         }
         ,
         handleTaskAdded(newTask) {
             this.todoTasks.unshift(newTask)
-            console.log(newTask)
-            console.log(this.todoTasks)
+           
         },
         openModal(taskId) {
             this.idTask = taskId

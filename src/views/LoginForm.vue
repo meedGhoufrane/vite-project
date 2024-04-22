@@ -20,9 +20,7 @@
     },
     methods: {
       submitForm() {
-        // Handle form submission here
         console.log('Form submitted:', this.formData);
-        // You can make an HTTP request to your server to handle login
       }
     }
   };

@@ -1,61 +1,43 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import HomeView from "../views/Home.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../components/Home.vue";
+import LoginForm from "../components/LoginForm.vue";
 
-Vue.use(VueRouter);
+let isLoggedIn = false; 
 
 const routes = [
+  { path: "/", name: "Home", component: Home },
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: "/login",
+    name: "Login",
+    component: LoginForm,
   },
   {
     path: "/register",
-    name: "register",
-    component: () => import("../views/RegistrationForm.vue"),
+    name: "Register",
+    component: () => import("../components/RegistrationForm.vue"),
   },
-  {
-    path: "/login",
-    name: "login",
-    component: () => import("../views/LoginForm.vue"),
-  },
-  // {
-  //   path: '/tasks',
-  //   name: 'tasks',
-  //   component: () => import("../views/TasksView.vue")
-  // }
 ];
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.name !== 'Login' && !isLoggedIn) {
+    next({ name: 'Login' }); 
+  } else {
+    next();
+  }
+});
+
+export function login(credentials) {
+  if (credentials.username === "user" && credentials.password === "password") {
+    isLoggedIn = true;
+    return true;
+  } else {
+    return false;
+  }
+}
+
 export default router;
-
-// import { createRouter, createWebHistory } from "vue-router";
-
-// import Home from "../components/Home.vue";
-
-// const routes = [
-//   { path: "/", name: "Home", component: Home },
-//   {
-//     path: "/login",
-//     name: "Login",
-//     component: () => import("../components/LoginForm.vue"),
-//   },
-//   {
-//     path: "/register",
-//     name: "Register",
-//     component: () => import("../components/RegistrationForm.vue"),
-//   },
-// ];
-
-// const router = createRouter({
-//   history: createWebHistory(),
-//   routes,
-// });
-
-// export default router;
