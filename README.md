@@ -6,7 +6,7 @@ Taskify is a modern task management platform that allows users to efficiently ma
 Task Listing: View the list of current tasks upon logging in.
 Task Creation: Create a new task by providing a title, description, and deadline.
 Task Modification: Edit details of existing tasks as needed.
-Task Deletion: Delete tasks that are no longer needed.
+Task Deletion: Delete tasks that are no longer needed. 
 Task Status Update: Mark tasks as completed or incomplete to track their progress.
 Technologies Used
 Framework: Vue.js - A progressive JavaScript framework for building user interfaces.
